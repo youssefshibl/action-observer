@@ -1,0 +1,13 @@
+{
+  "name": "action-observer",
+  "version": "1.0.0",
+  "description": "observer some element and if it is visible, do something",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [
+    "observer",
+    "IntersectionObserver"
+  ],
+  "author": "youssefshebl",
+  "license": "MIT"
+}
