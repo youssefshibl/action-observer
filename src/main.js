@@ -3,7 +3,7 @@ export function IntersectionObserverFun(
     callbackmethod,
      {
       once = true,
-      time = 0,
+      timeout = 0,
       threshold = 0,
       root = null,
       rootMargin = "100px",
@@ -12,9 +12,14 @@ export function IntersectionObserverFun(
   ) {
     if (!window.IntersectionObserver) {
       console.error("IntersectionObserver is not supported");
+      return
     }
     if (typeof target === "string") {
       target = document.querySelector(target);
+    }
+    if(!target){
+      console.error("target is not defined");
+      return
     }
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,12 +27,12 @@ export function IntersectionObserverFun(
           // check if the element is in viewport
           if (entry.isIntersecting) {
             // check if time out
-            if (time == 0) {
+            if (timeout == 0) {
               callbackmethod(entry, data);
             } else {
               setTimeout(() => {
                 callbackmethod(data);
-              }, time);
+              }, timeout);
             }
             // unobserve the element
             if (once) {
