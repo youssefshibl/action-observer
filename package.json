@@ -1,13 +1,21 @@
 {
-  "name": "action-observer",
+  "name": "action-observer-js",
   "version": "1.0.0",
   "description": "observer some element and if it is visible, do something",
   "main": "src/index.js",
+  "module": "src/index.js", 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youssefshibl/action-observer.git"
+  },
   "scripts": {},
   "keywords": [
     "observer",
     "IntersectionObserver"
   ],
   "author": "youssefshebl",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

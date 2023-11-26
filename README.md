@@ -7,7 +7,7 @@ Action observer is a simple package that allows you to observe your element and 
 ## 🕸️ Installation
 
 ```bash
-npm install action-observer
+npm install action-observer-js
 ```
 
 ## 🕸️ usage
